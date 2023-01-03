@@ -1,0 +1,251 @@
+:root {
+    --color-theme1: #3D28B3;
+    --color-theme2: #2FB4DF;
+    --body-text-color: #D59120;
+
+    --reg-font: 'Varela Round', sans-serif;
+    --code-font: 'IBM Plex Mono', monospace;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--reg-font);
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    
+}
+
+/* Navbar styling */
+/* Aligns the section links to the right */
+#navbar {
+    background: #373737;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar > a {
+    text-decoration: none;
+    color: #2FB4DF;
+    font-size: 2rem;
+    padding: 3rem;
+    transition: all .2s ease-in-out;
+}
+
+#navbar > a:visited {
+    text-decoration: none;
+    color: #2FB4DF;
+}
+
+#navbar > a:hover {
+    text-decoration: none;
+    color: var(--body-text-color);
+}
+
+/* Welcome section */
+#welcome-section {
+    background: linear-gradient(40deg, var(--color-theme1), var(--color-theme2));
+    color: var(--body-text-color);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-text > h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+.welcome-text > p {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+/* Projects section */
+#projects {
+    background: repeating-linear-gradient(45deg, #131313 30px, #2E2E2E 50px);
+    padding: 7rem 10rem 3rem;
+}
+
+#projects > h1 {
+    color: var(--body-text-color);
+    font-size: 5.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+
+.project-tile {
+    background-color: #4C4C4C;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.project-tile:hover {
+    background-color: #2C2C2C;
+    transform: scale(1.06);
+}
+
+.project-tile > img {
+    width: 100%;
+    max-width: 350px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-tile > h3 {
+    font-family: var(--code-font);
+    color: var(--body-text-color);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.project-box > a {
+    text-decoration: none; 
+}
+
+#projects > a {
+    display: block;
+    font-family: var(--code-font);
+    color: var(--body-text-color);
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4C4C4C;
+    border-radius: 8px;
+    border: 3px solid var(--body-text-color);
+    padding: 1rem 1.2rem;
+    margin: 5rem auto;
+    width: 160px;
+    transition: all .2s ease-in-out;
+}
+
+#projects > a:hover {
+    background-color: #2C2C2C;
+}
+
+/* Profile links styling */
+#profile-links {
+    background-color: #373737;
+    color: var(--body-text-color);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+#profile-links > h1 {
+    font-size: 5.5rem;
+    margin-top: 0;
+    padding-top: 6rem;
+}
+
+i {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+}
+
+/* TODO add animations for when hovering over profile links */
+/* just increase size */
+
+#profile-links > a {
+    color: var(--body-text-color);
+    transition: all .2s ease-in-out;
+}
+
+#profile-links > a:visited {
+    color: var(--body-text-color);
+}
+
+#profile-links > a:active {
+    color: #2FB4DF;
+}
+
+#profile-links > a:hover {
+    color: #2FB4DF;
+}
+
+@media only screen and (max-width: 1630px) {
+
+    #projects {
+        padding: 7rem 5rem 3rem;
+    }
+
+    .project-tile > img {
+        width: 100%;
+        max-width: 340px;
+        height: 340px;
+    }
+
+    .project-box {
+        padding: 0 10rem;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+
+    #projects {
+        padding: 7rem 2.5rem 3rem;
+    }
+
+    .project-tile > img {
+        width: 100%;
+        max-width: 380px;
+        height: 390px;
+    }
+
+    .project-box {
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #projects > h1 {
+        font-size: 4rem;
+    }
+
+    #profile-links > h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #projects > h1 {
+        font-size: 3.5rem;
+    }
+
+    #profile-links > h1 {
+        font-size: 3.5rem;
+    }
+}
